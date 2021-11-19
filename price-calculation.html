@@ -1,0 +1,428 @@
+<html>
+
+<head>
+  <!-- UIkit CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" rel="stylesheet" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div style="margin: 50px auto; width: 1280px;">
+      <h1>Pricing</h1>
+      <div style="display: flex; flex-direction: row;">
+        <div class="uk-card uk-card-default uk-card-body" style="margin-right: 32px; width: 1200px;">
+
+          <form id="pricing-form" class="uk-form-stacked" method="get">
+
+            <div class="input-wrapper uk-margin" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+              <div class="uk-margin" style="min-width: 170px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="pricing-type">Pricing Type</label>
+                <div class="uk-form-controls">
+                  <select id="pricing-type" class="uk-select" name="pricing-type">
+                    <option value="default">default</option>
+                    <option value="monthly">monthly</option>
+                    <option value="daily">daily</option>
+                    <option value="nightly">nightly</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="uk-margin" style="min-width: 170px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="move-in-restriction">Move-in Restriction</label>
+                <div class="uk-form-controls">
+                  <select id="move-in-restriction" class="uk-select" name="move-in-restriction">
+                    <option value="flexible">flexible</option>
+                    <option value="1st">1st</option>
+                    <option value="1st15th">1st15th</option>
+                    <option value="1stOpen">1stOpen</option>
+                    <option value="1st15thOpen">1st15thOpen</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="uk-margin" style="max-width: 170px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="start-date">From</label>
+                <div class="uk-form-controls">
+                  <input id="start-date" class="uk-input" name="start-date" type="date" placeholder="From">
+                </div>
+              </div>
+
+              <div class="uk-margin" style="max-width: 170px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="end-date">To</label>
+                <div class="uk-form-controls">
+                  <input id="end-date" class="uk-input" name="end-date" type="date" placeholder="To">
+                </div>
+              </div>
+
+              <div class="uk-margin" style="min-width: 170px; margin: 10px 10px 10px 0px !important;">
+              </div>
+
+              <div class="uk-margin"
+                style="min-width: 170px; margin: 10px 10px 10px 0px !important;text-align: center;">
+                <label class="uk-form-label" for="button-calculate">&nbsp;</label>
+                <div class="uk-form-controls">
+                  <input type="submit" class="uk-button uk-button-primary" value="Calculate" />
+                </div>
+              </div>
+            </div>
+
+            <div class="input-wrapper" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-1">January</label>
+                <div class="uk-form-controls">
+                  <input id="price-1" class="uk-input input_monthly_variation" type="number"
+                    name="price-1" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-2">February</label>
+                <div class="uk-form-controls">
+                  <input id="price-2" class="uk-input input_monthly_variation" type="number"
+                    name="price-2" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-3">March</label>
+                <div class="uk-form-controls">
+                  <input id="price-3" class="uk-input input_monthly_variation" type="number"
+                    name="price-3" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-4">April</label>
+                <div class="uk-form-controls">
+                  <input id="price-4" class="uk-input input_monthly_variation" type="number"
+                    name="price-4" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-5">May</label>
+                <div class="uk-form-controls">
+                  <input id="price-5" class="uk-input input_monthly_variation" type="number"
+                    name="price-5" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-6">June</label>
+                <div class="uk-form-controls">
+                  <input id="price-6" class="uk-input input_monthly_variation" type="number"
+                    name="price-6" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-7">July</label>
+                <div class="uk-form-controls">
+                  <input id="price-7" class="uk-input input_monthly_variation" type="number"
+                    name="price-7" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-8">August</label>
+                <div class="uk-form-controls">
+                  <input id="price-8" class="uk-input input_monthly_variation" type="number"
+                    name="price-8" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-9">September</label>
+                <div class="uk-form-controls">
+                  <input id="price-9" class="uk-input input_monthly_variation" type="number"
+                    name="price-9" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-10">October</label>
+                <div class="uk-form-controls">
+                  <input id="price-10" class="uk-input input_monthly_variation" type="number"
+                    name="price-10" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-11">November</label>
+                <div class="uk-form-controls">
+                  <input id="price-11" class="uk-input input_monthly_variation" type="number"
+                    name="price-11" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+              <div class="uk-margin" style="min-width: 100px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="price-12">December</label>
+                <div class="uk-form-controls">
+                  <input id="price-12" class="uk-input input_monthly_variation" type="number"
+                    name="price-12" style="width: 170px;" placeholder="1000">
+                </div>
+              </div>
+            </div>
+
+            <h4>Current Homelike calculation</h4>
+            <pre id="duration-table-current">... current homelike calculation ...</pre>
+
+            <h4>Recommendation individual rates (breakdown monthly to daily rate)</h4>
+            <pre id="duration-table-individual">... recommendation individual rates ...</pre>
+
+            <h4>External Date Library (Moment)</h4>
+            <pre id="duration-table-moment">... external date library ...</pre>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const MONTHS = ['jan', 'feb', 'mar', 'april', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+    const DATE_FORMAT = 'YYYY-MM-DD';
+    const DATE_FORMAT_DISPLAY = 'DD-MMM-YYYY';
+    const DEFAULT_STAY = { amount: 3, period: 'month' };
+    const DEFAULT_PRICES = { default: 1000, monthly: 1200, daily: 30, nightly: 40 };
+    let previousPricingType = '';
+
+    // set duration tables
+    const setDurationTables = () => {
+      $('#duration-table-current').html(getDurationTable('current'));
+      $('#duration-table-individual').html(getDurationTable('individual'));
+      $('#duration-table-moment').html(getDurationTable('moment'));
+    };
+
+    // get duration table
+    const getDurationTable = method => {
+      const months = getFormattedMonths(method);
+      let output = '';
+      output += '<table width="100%" border="1" cellpadding="0" cellspacing="0">';
+      output += '<tr>';
+      output += '<th width="10%" align="center" bgcolor="#aaa">Month</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">Start</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">End</td>';
+      output += '<th width="10%" align="center" bgcolor="#aaa">Stay Days</td>';
+      output += '<th width="10%" align="center" bgcolor="#aaa">Total Days</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">Duration</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">Price</td>';
+      output += '<th width="22%" align="center" bgcolor="#aaa">Reason</td>';
+      output += '</tr>';
+      let totalDuration = 0, totalPrice = 0, totalDays = 0;
+      months.forEach(month => {
+        const price = getDurationPrice(month);
+        output += '<tr>';
+        output += `<td align="center">${moment(month.start).format('MMM\'YY')}</td>`;
+        output += `<td align="center">${moment(month.start).format(DATE_FORMAT_DISPLAY)}</td>`;
+        output += `<td align="center">${moment(month.end).format(DATE_FORMAT_DISPLAY)}</td>`;
+        output += `<td align="center">${month.usedDays}</td>`;
+        output += `<td align="center">${month.totalDays}</td>`;
+        output += `<td align="center">${month.scalingFactor.toFixed(4)}</td>`;
+        output += `<td align="center">${price.toFixed(4)}</td>`;
+        output += `<td align="center">${month.scalingReason}</td>`;
+        output += '</tr>';
+        totalDuration += month.scalingFactor;
+        totalPrice += price;
+        totalDays += month.usedDays;
+      });
+      output += '<tr>';
+      output += '<td align="center" bgcolor="#ccc"><b>TOTAL</b></td>';
+      if (months.length) {
+        output += `<td align="center" bgcolor="#ccc">${moment(months[0].start).format(DATE_FORMAT_DISPLAY)}</td>`;
+        output += `<td align="center" bgcolor="#ccc">${moment(months[months.length - 1].end).format(DATE_FORMAT_DISPLAY)}</td>`;
+      } else {
+        output += '<td colspan="2" bgcolor="#ccc">&nbsp;</td>';
+      }
+      output += `<td align="center" bgcolor="#ccc"><b>${totalDays}</b></td>`;
+      output += '<td bgcolor="#ccc">&nbsp;</td>';
+      output += `<td align="center" bgcolor="#ccc"><b>${totalDuration.toFixed(4)}</b></td>`;
+      output += `<td align="center" bgcolor="#ccc"><b>${totalPrice.toFixed(4)}</b></td>`;
+      if (months.length && method === 'moment') {
+        const totalMoment = moment(months[months.length - 1].end).clone().add(1, 'day').diff(months[0].start, 'month', true)
+        output += `<td align="center" bgcolor="#ccc"><b>${totalMoment.toFixed(4)}</b></td>`;
+      } else {
+        output += '<td bgcolor="#ccc">&nbsp;</td>';
+      }
+      output += '</tr>';
+      output += '</table>';
+      return output;
+    }
+
+    // get duration price
+    const getDurationPrice = month => {
+      if (['daily', 'nightly'].includes($('#pricing-type').val())) {
+        return $(`#price-${month.month + 1}`).val() * month.usedDays;
+      }
+      return $(`#price-${month.month + 1}`).val() * month.scalingFactor;;
+    }
+
+    // get formatted array of months
+    const getFormattedMonths = method => {
+      const tripFrom = moment($('#start-date').val(), DATE_FORMAT).startOf('day');
+      const tripTo = moment($('#end-date').val(), DATE_FORMAT).startOf('day');
+      const trip = getFormattedTrip(tripFrom, tripTo);
+      const scaling = getFormattedScaling(trip, method);
+
+      if (!trip.length) return [];
+
+      const tripMonths = [];
+
+      trip.forEach((month, key) => {
+        const { firstDay, lastDay, daysInMonth: totalDays, rentalDaysInMonth: usedDays } = month;
+        const { scalingFactor, scalingReason } = scaling[key];
+        tripMonths.push({
+          start: firstDay.toDate(),
+          end: lastDay.toDate(),
+          month: firstDay.month(),
+          totalDays,
+          usedDays,
+          scalingFactor,
+          scalingReason,
+        });
+      });
+
+      return tripMonths;
+    }
+
+    // get formatted array of trip
+    const getFormattedTrip = (tripFrom, tripTo) => {
+      if (!tripFrom || !tripTo || tripTo < tripFrom) return [];
+
+      const pricingType = $('#pricing-type').val();
+      const dateIterator = tripFrom.clone();
+      const trip = [];
+
+      while (tripTo >= dateIterator || dateIterator.format('M') === tripTo.format('M')) {
+        const firstDay = moment.max(tripFrom, dateIterator.clone().startOf('month'));
+        const lastDay = moment.min(
+          tripTo,
+          dateIterator
+            .clone()
+            .endOf('month')
+            .startOf('day')
+        );
+        const daysInMonth = firstDay.daysInMonth();
+        const rentalDaysInMonth = lastDay.diff(firstDay, 'day') + (lastDay !== tripTo || pricingType !== 'nightly' ? 1 : 0);
+        trip.push({
+          firstDay,
+          lastDay,
+          daysInMonth,
+          rentalDaysInMonth,
+        });
+        dateIterator.add(1, 'month');
+      }
+
+      return trip;
+    }
+
+    // get formatted array of trip
+    const getFormattedScaling = (trip, method) => {
+      if (!trip || !trip.length) return [];
+
+      const pricingType = $('#pricing-type').val();
+      const scaling = [];
+      const firstMonth = trip[0];
+      const lastMonth = trip[trip.length - 1];
+      let scalingReason = '';
+      trip.forEach(month => {
+        let scalingFactor = 1;
+        if (method === 'moment') {
+          scalingFactor = moment(month.lastDay).clone().add(1, 'day').diff(month.firstDay, 'month', true);
+        }
+        else {
+          let rentalDaysInMonth = month.rentalDaysInMonth;
+          if (pricingType === 'nightly' && month.lastDay === lastMonth.lastDay) {
+            rentalDaysInMonth += 1;
+          }
+          scalingFactor = rentalDaysInMonth / month.daysInMonth;
+          if (pricingType === 'monthly') {
+            scalingFactor = Math.round(scalingFactor * 2) / 2;
+            scalingReason = '0.5 factor';
+          } else {
+            if (method !== 'individual' &&
+              ((month.firstDay.date() === 16 &&
+                (lastMonth.lastDay.date() === 15 || lastMonth.lastDay.date() === lastMonth.lastDay.daysInMonth())) ||
+                (month.lastDay.date() === 15 && (firstMonth.firstDay.date() === 1 || firstMonth.firstDay.date() === 16)))
+            ) {
+              scalingFactor = 0.5;
+              scalingReason = 'half month';
+            } else if (month === lastMonth && rentalDaysInMonth !== month.daysInMonth && rentalDaysInMonth < firstMonth.firstDay.format('D')) {
+              if (method === 'individual') {
+                scalingFactor = rentalDaysInMonth / month.daysInMonth;
+                scalingReason = 'stay / thisMonthTotal';
+              } else {
+                scalingFactor = rentalDaysInMonth / firstMonth.daysInMonth;
+                scalingReason = 'stay / firstMonthTotal';
+              }
+            } else {
+              if (scalingFactor === 1) {
+                scalingReason = 'full month';
+              } else {
+                scalingReason = 'stay / thisMonthTotal';
+              }
+            }
+          }
+        }
+
+        scaling.push({ scalingFactor, scalingReason });
+      });
+
+      return scaling;
+    }
+
+    // set trip dates from params or default
+    const setTripDates = (from, to) => {
+      const tripFrom = moment(from, DATE_FORMAT, true).isValid() ? from : moment().startOf('day');
+      const tripTo = moment(to, DATE_FORMAT, true).isValid() ? to : tripFrom.clone().add(DEFAULT_STAY['amount'], DEFAULT_STAY['period']).add(-1, 'day');
+      $('#start-date').val(tripFrom.format(DATE_FORMAT));
+      $('#end-date').val(tripTo.format(DATE_FORMAT));
+    };
+
+    // set default pricing type
+    const setDefaultPricingType = pricingType => {
+      $('#pricing-type').val(pricingType);
+    };
+    
+    // set default move in restriction
+    const setDefaultMoveInRestriction = restriction => {
+      $('#move-in-restriction').val(restriction);
+    };
+
+    // set default prices for all months based on pricingType
+    const setDefaultPrices = prices => {
+      const pricingType = $('#pricing-type').val();
+      MONTHS.forEach((m, idx) => {
+        const price = prices ? prices[idx] : null;
+        $(`#price-${idx + 1}`).val(price || DEFAULT_PRICES[pricingType]);
+      });
+      previousPricingType = $('#pricing-type').val();
+    }
+
+    $(document).ready(function () {
+      $('form').submit(function (event) {
+        // event.preventDefault();
+      });
+
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const pricingType = urlParams.get('pricing-type') || 'default';
+      const restriction = urlParams.get('move-in-restriction') || 'flexible';
+      const tripFrom = moment(urlParams.get('start-date'));
+      const tripTo = moment(urlParams.get('end-date')) || (moment(tripFrom, DATE_FORMAT, true).isValid() ? tripFrom.clone().add(3, 'month').add(-1, 'day') : null);
+      const prices = [];
+      MONTHS.forEach((m, idx) => {
+        prices[idx] = urlParams.get(`price-${idx + 1}`);
+      });
+
+      setTripDates(tripFrom, tripTo);
+      setDefaultPricingType(pricingType);
+      setDefaultMoveInRestriction(restriction);
+      setDefaultPrices(prices);
+      setDurationTables();
+
+      $('#pricing-type').change(setDefaultPrices);
+      $('#trip-submit').click(setDurationTables);
+    });
+  </script>
+</body>
+
+</html>

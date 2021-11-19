@@ -1,0 +1,620 @@
+<html>
+
+<head>
+  <!-- UIkit CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/css/uikit.min.css" rel="stylesheet" />
+
+  <!-- UIkit JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.2.0/js/uikit-icons.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div style="margin: 50px auto; width: 1280px;">
+      <h1>Availability</h1>
+      <div style="display: flex; flex-direction: row;">
+        <div class="uk-card uk-card-default uk-card-body" style="margin-right: 32px; width: 1200px;">
+
+          <form id="pricing-form" class="uk-form-stacked" method="get">
+
+            <div class="input-wrapper">
+              <h4>Blockers</h4>
+              <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                <p style="color: black; font-size: 22px; padding: 40px 30px 10px;">1</p>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-from-0">From</label>
+                  <div class="uk-form-controls">
+                    <input id="blocker-from-0" name="blocker-from-0" class="uk-input input_override" type="date"
+                      placeholder="From">
+                  </div>
+                </div>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-to-0">To</label>
+                  <div class="uk-form-controls">
+                    <input id="blocker-to-0" name="blocker-to-0" class="uk-input input_override" type="date"
+                      placeholder="To">
+                  </div>
+                </div>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-to-0">&nbsp;</label>
+                  <div class="uk-form-controls">
+                    <input type="button" id="blocker-clear-0" name="blocker-clear-0" class="uk-button uk-button-primary"
+                      value="Clear" />
+                  </div>
+                </div>
+              </div>
+              <div class="input-wrapper" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                <p style="color: black; font-size: 22px; padding: 40px 30px 10px;">2</p>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-from-1">From</label>
+                  <div class="uk-form-controls">
+                    <input id="blocker-from-1" name="blocker-from-1" class="uk-input input_override" type="date"
+                      placeholder="From">
+                  </div>
+                </div>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-to-1">To</label>
+                  <div class="uk-form-controls">
+                    <input id="blocker-to-1" name="blocker-to-1" class="uk-input input_override" type="date"
+                      placeholder="To">
+                  </div>
+                </div>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-to-1">&nbsp;</label>
+                  <div class="uk-form-controls">
+                    <input type="button" id="blocker-clear-1" name="blocker-clear-1" class="uk-button uk-button-primary"
+                      value="Clear" />
+                  </div>
+                </div>
+              </div>
+              <div class="input-wrapper" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                <p style="color: black; font-size: 22px; padding: 40px 30px 10px;">3</p>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-from-2">From</label>
+                  <div class="uk-form-controls">
+                    <input id="blocker-from-2" name="blocker-from-2" class="uk-input input_override" type="date"
+                      placeholder="From">
+                  </div>
+                </div>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-to-2">To</label>
+                  <div class="uk-form-controls">
+                    <input id="blocker-to-2" name="blocker-to-2" class="uk-input input_override" type="date"
+                      placeholder="To">
+                  </div>
+                </div>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-to-2">&nbsp;</label>
+                  <div class="uk-form-controls">
+                    <input type="button" id="blocker-clear-2" name="blocker-clear-2" class="uk-button uk-button-primary"
+                      value="Clear" />
+                  </div>
+                </div>
+              </div>
+              <div class="input-wrapper" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                <p style="color: black; font-size: 22px; padding: 40px 30px 10px;">4</p>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-from-3">From</label>
+                  <div class="uk-form-controls">
+                    <input id="blocker-from-3" name="blocker-from-3" class="uk-input input_override" type="date"
+                      placeholder="From">
+                  </div>
+                </div>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-to-3">To</label>
+                  <div class="uk-form-controls">
+                    <input id="blocker-to-3" name="blocker-to-3" class="uk-input input_override" type="date"
+                      placeholder="To">
+                  </div>
+                </div>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-to-3">&nbsp;</label>
+                  <div class="uk-form-controls">
+                    <input type="button" id="blocker-clear-3" name="blocker-clear-3" class="uk-button uk-button-primary"
+                      value="Clear" />
+                  </div>
+                </div>
+              </div>
+              <div class="input-wrapper" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                <p style="color: black; font-size: 22px; padding: 40px 30px 10px;">5</p>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-from-4">From</label>
+                  <div class="uk-form-controls">
+                    <input id="blocker-from-4" name="blocker-from-4" class="uk-input input_override" type="date"
+                      placeholder="From">
+                  </div>
+                </div>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-to-4">To</label>
+                  <div class="uk-form-controls">
+                    <input id="blocker-to-4" name="blocker-to-4" class="uk-input input_override" type="date"
+                      placeholder="To">
+                  </div>
+                </div>
+                <div class="uk-margin" style="min-width: 50px; margin: 10px 10px 10px 0px !important;">
+                  <label class="uk-form-label" for="blocker-to-4">&nbsp;</label>
+                  <div class="uk-form-controls">
+                    <input type="button" id="blocker-clear-4" name="blocker-clear-4" class="uk-button uk-button-primary"
+                      value="Clear" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="input-wrapper uk-margin" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+
+              <div class="uk-margin" style="min-width: 170px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="move-in-restriction">Move-in Restriction</label>
+                <div class="uk-form-controls">
+                  <select id="move-in-restriction" class="uk-select" name="move-in-restriction">
+                    <option value="flexible">flexible</option>
+                    <option value="1st">1st</option>
+                    <option value="1st15th">1st15th</option>
+                    <option value="1stOpen">1stOpen</option>
+                    <option value="1st15thOpen">1st15thOpen</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="uk-margin" style="max-width: 180px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="min-rental">Min Rental</label>
+                <div class="uk-form-controls">
+                  <input id="min-rental-time-amount" class="uk-input min-rental-time-amount" type="number"
+                    name="min-rental-time-amount" style="width: 170px;" placeholder="1">
+                </div>
+                <label class="uk-form-label" for="min-rental-time-period">&nbsp;</label>
+                <div class="uk-form-controls">
+                  <select id="min-rental-time-period" class="uk-select" name="min-rental-time-period">
+                    <option value="day">day</option>
+                    <option value="week">week</option>
+                    <option value="month">month</option>
+                    <option value="year">year</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="uk-margin" style="max-width: 180px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="min-lead">Min Lead</label>
+                <div class="uk-form-controls">
+                  <input id="min-lead-time-amount" class="uk-input min-lead-time-amount" type="number"
+                    name="min-lead-time-amount" style="width: 170px;" placeholder="1">
+                </div>
+                <label class="uk-form-label" for="min-lead-time-period">&nbsp;</label>
+                <div class="uk-form-controls">
+                  <select id="min-lead-time-period" class="uk-select" name="min-lead-time-period">
+                    <option value="day">day</option>
+                    <option value="week">week</option>
+                    <option value="month">month</option>
+                    <option value="year">year</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="uk-margin" style="max-width: 180px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="min-lead">Restricted Vacancy</label>
+                <div class="uk-form-controls">
+                  <input id="restricted-vacancy-amount" class="uk-input restricted-vacancy-amount" type="number"
+                    name="restricted-vacancy-amount" style="width: 170px;" placeholder="1">
+                </div>
+                <label class="uk-form-label" for="restricted-vacancy-period">&nbsp;</label>
+                <div class="uk-form-controls">
+                  <select id="restricted-vacancy-period" class="uk-select" name="restricted-vacancy-period">
+                    <option value="day">day</option>
+                    <option value="week">week</option>
+                    <option value="month">month</option>
+                    <option value="year">year</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="uk-margin" style="max-width: 170px; margin: 10px 10px 10px 0px !important;">
+                <label class="uk-form-label" for="start-date">Trip From</label>
+                <div class="uk-form-controls">
+                  <input id="start-date" class="uk-input" name="start-date" type="date" placeholder="From">
+                </div>
+                <label class="uk-form-label" for="end-date">Trip To</label>
+                <div class="uk-form-controls">
+                  <input id="end-date" class="uk-input" name="end-date" type="date" placeholder="To">
+                </div>
+              </div>
+
+              <div class="uk-margin"
+                style="min-width: 170px; margin: 10px 10px 10px 0px !important;text-align: center;">
+                <label class="uk-form-label" for="button-calculate">&nbsp;</label>
+                <div class="uk-form-controls">
+                  <input type="submit" class="uk-button uk-button-primary" value="Calculate" />
+                </div>
+              </div>
+            </div>
+
+            <h4>Availability ranges</h4>
+            <pre id="availability-ranges">... availability ranges ...</pre>
+
+            <h4>Availability in search</h4>
+            <pre id="availability-in-search">... availability in search ...</pre>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const DATE_FORMAT = 'YYYY-MM-DD';
+    const DATE_FORMAT_DISPLAY = 'DD-MMM-YYYY';
+    const DEFAULT_STAY = { amount: 3, period: 'month' };
+    const DEFAULT_PRICES = { default: 1000, monthly: 1200, daily: 30, nightly: 40 };
+    let previousPricingType = '';
+
+    // set availability ranges
+    const setAvailabilityRanges = () => {
+      const availabilities = getAvailabilities(getBlockers());
+      const searchAvailabilities = getSearchAvailabilities(availabilities);
+      $('#availability-ranges').html(getAvailabilityRanges(availabilities));
+      $('#availability-in-search').html(getAvailabilityInSearch(searchAvailabilities));
+    }
+
+    const getBlockers = () => {
+      const blockers = [];
+      let count = 0;
+      do {
+        const blocker = {};
+        if ($(`#blocker-from-${count}`).val()) {
+          blocker.start = $(`#blocker-from-${count}`).val();
+        }
+        if ($(`#blocker-to-${count}`).val()) {
+          blocker.end = $(`#blocker-to-${count}`).val();
+        }
+        if (blocker.start || blocker.end) {
+          blockers.push(blocker);
+        }
+      } while ($(`#blocker-from-${++count}`).val() !== undefined);
+      return blockers;
+    }
+
+    // get availabilities
+    const getAvailabilities = blockers => {
+      const availabilities = [];
+      const today = moment.utc().startOf('day');
+      blockers.forEach(blocker => {
+        const availability = {};
+        const { start: blockerStart, end: blockerEnd } = blocker;
+
+        if (!blockerStart) {
+          if (availabilities.length) {
+            delete availabilities[availabilities.length - 1];
+          }
+        }
+
+        if (blockerEnd) {
+          // end in past
+          if (moment.utc(blockerEnd).diff(today, 'day') < 0) {
+            availability.start = today;
+          }
+          // end in future
+          else {
+            availability.start = moment.utc(blocker.end).clone().add(1, 'day');
+          }
+        }
+        if (blockerStart) {
+          // startin future
+          if (moment.utc(blockerStart).diff(today, 'day') > 0) {
+            if (availabilities.length) {
+              availabilities[availabilities.length - 1].end = moment.utc(blocker.start).clone().add(-1, 'day');
+            } else {
+              availabilities[0] = { start: today, end: moment.utc(blocker.start).clone().add(-1, 'day') };
+            }
+          }
+        }
+        // start in past
+        if (moment.utc(blocker.start).diff(today, 'day') < 0) {
+          if (blockerStart) {
+            // // end in past
+            // if (!blockerEnd) {
+            //   // availability.start = today;
+            // } else if (blockerEnd && moment.utc(blockerEnd).diff(today, 'day') < 0) {
+            //   availability.start = today;
+            // }
+            // // end in future
+            // else {
+            //   availability.start = moment.utc(blocker.end).clone().add(1, 'day');
+            // }
+          }
+        }
+        if (availability.start || availability.end) {
+          availabilities.push(availability);
+        }
+      });
+      const moveInRestriction = $('#move-in-restriction').val();
+      const minRentalTime = {
+        amount: $('#min-rental-time-amount').val(),
+        period: $('#min-rental-time-period').val(),
+      };
+      const minLeadTime = {
+        amount: $('#min-lead-time-amount').val(),
+        period: $('#min-lead-time-period').val(),
+      };
+      availabilities.forEach((availability, index) => {
+        let comments = '';
+        // calculate start
+        if (moment.utc(today.clone().add(minLeadTime.amount, minLeadTime.period)).diff(availability.start, 'day') > 0) {
+          availability.calculatedStart = today.clone().add(minLeadTime.amount, minLeadTime.period);
+          comments += `<li>From: Add minLeadTime (${moment.utc(availability.calculatedStart).format(DATE_FORMAT_DISPLAY)})</li>`;
+        } else {
+          availability.calculatedStart = availability.start;
+        }
+        if (moveInRestriction !== 'flexible') {
+          if (moveInRestriction.match(/15th/)) {
+            if (moment.utc(availability.calculatedStart).date() !== 1 && moment.utc(availability.calculatedStart).date() !== 16) {
+              if (moment.utc(availability.calculatedStart).date() < 16) {
+                availability.calculatedStart = moment.utc(availability.calculatedStart).date(16);
+                comments += `<li>From: Add moveInRestriction (${moment.utc(availability.calculatedStart).format(DATE_FORMAT_DISPLAY)}})</li>`;
+              } else {
+                availability.calculatedStart = moment.utc(availability.calculatedStart).add(1, 'month').startOf('month');
+                comments += `<li>From: Add moveInRestriction (${moment.utc(availability.calculatedStart).format(DATE_FORMAT_DISPLAY)}})</li>`;
+              }
+            }
+          } else if (moveInRestriction.match(/1st/)) {
+            if (moment.utc(availability.calculatedStart).date() !== 1) {
+              availability.calculatedStart = moment.utc(availability.calculatedStart).add(1, 'month').startOf('month');
+              comments += `<li>From: Add moveInRestriction (${moment.utc(availability.calculatedStart).format(DATE_FORMAT_DISPLAY)}})</li>`;
+            }
+          }
+        }
+        // calculate end
+        if (availability.end) {
+          availability.calculatedEnd = availability.end;
+          if (moveInRestriction !== 'flexible' && !moveInRestriction.match(/Open/)) {
+            if (moveInRestriction.match(/15th/)) {
+              if (moment.utc(availability.calculatedEnd).date() !== 16 && moment.utc(availability.calculatedEnd).date() !== moment.utc(availability.calculatedEnd).daysInMonth()) {
+                if (moment.utc(availability.calculatedEnd).date() < 16) { //moment.utc(availability.calculatedEnd).daysInMonth()) {
+                  availability.calculatedEnd = moment.utc(availability.calculatedEnd).add(-1, 'month').endOf('month').startOf('day');
+                  comments += `<li>To: Add moveInRestriction (${moment.utc(availability.calculatedEnd).format(DATE_FORMAT_DISPLAY)}})</li>`;
+                } else {
+                  availability.calculatedEnd = moment.utc(availability.calculatedEnd).date(16);
+                  comments += `<li>To: Add moveInRestriction (${moment.utc(availability.calculatedEnd).format(DATE_FORMAT_DISPLAY)})</li>`;
+                }
+              }
+            } else if (moveInRestriction.match(/1st/)) {
+              if (moment.utc(availability.calculatedEnd).date() !== 1) {
+                availability.calculatedEnd = moment.utc(availability.calculatedEnd).clone().add(-1, 'month').endOf('month').startOf('day');
+                comments += `<li>To: Add moveInRestriction (${moment.utc(availability.calculatedEnd).format(DATE_FORMAT_DISPLAY)})</li>`;
+              }
+            }
+          }
+        }
+        if (minRentalTime) {
+          if (availability.calculatedEnd) {
+            const dateDiff = moment.utc(availability.calculatedEnd).clone().add(1, 'day').diff(moment.utc(availability.calculatedStart), minRentalTime.period, true);
+            if (dateDiff < minRentalTime.amount) {
+              comments += `<li>Invalid minRentalTime (${dateDiff.toFixed(2)} ${minRentalTime.period})</li>`;
+              availability.calculatedStart = null;
+              availability.calculatedEnd = null;
+            } else {
+              comments += `<li>Valid minRentalTime: (${dateDiff.toFixed(2)} ${minRentalTime.period})</li>`;
+            }
+          }
+        }
+        if (comments) availability.comments = `<ul>${comments}</ul>`;
+      })
+      return availabilities;
+    }
+
+    // get search availabilities
+    const getSearchAvailabilities = availabilities => {
+      const results = [];
+      const tripStart = $('#start-date').val();
+      const tripEnd = $('#end-date').val();
+      const minRentalTime = {
+        amount: $('#min-rental-time-amount').val(),
+        period: $('#min-rental-time-period').val(),
+      };
+      const restrictedVacancy = {
+        amount: $('#restricted-vacancy-amount').val(),
+        period: $('#restricted-vacancy-period').val(),
+      };
+      availabilities.forEach(availability => {
+        let comments = '';
+        if (availability.calculatedStart) {
+          if (minRentalTime) {
+            const dateDiff = moment.utc(tripEnd).clone().add(1, 'day').diff(moment.utc(tripStart), minRentalTime.period, true);
+            if (dateDiff < minRentalTime.amount) {
+              comments += `<li>Invalid minRentalTime (${dateDiff.toFixed(2)} ${minRentalTime.period})</li>`;
+            }
+          }
+          if (moment.utc(tripStart).isBefore(moment.utc(availability.calculatedStart))) {
+            comments += `<li>Invalid tripStart: (${moment.utc(tripStart).format(DATE_FORMAT_DISPLAY)})</li>`;
+          } else if (moment.utc(availability.calculatedStart).clone().add(restrictedVacancy.amount, restrictedVacancy.period).isBefore(moment.utc(tripStart))) {
+            comments += `<li>Invalid tripStart (restrictedVacancy): (${moment.utc(tripStart).format(DATE_FORMAT_DISPLAY)})</li>`;
+          }
+          if (availability.calculatedEnd && moment.utc(tripEnd).isAfter(moment.utc(availability.calculatedEnd))) {
+            comments += `<li>Invalid tripEnd: (${moment.utc(tripEnd).format(DATE_FORMAT_DISPLAY)})</li>`;
+          }
+          const searchResult = {
+            start: availability.calculatedStart,
+            end: availability.calculatedEnd,
+          };
+          if (!comments) {
+            comments += '<li>Valid tripStart and tripEnd</li>';
+            searchResult.valid = true;
+          }
+          if (comments) searchResult.comments = `<ul>${comments}</ul>`;
+          results.push(searchResult);
+        }
+      })
+      console.log (JSON.stringify(results));
+      return results;
+    }
+
+    // get availability ranges
+    const getAvailabilityRanges = availabilities => {
+      let firstStart = null;
+      let output = '';
+      output += '<table width="100%" border="1" cellpadding="0" cellspacing="0">';
+      output += '<tr>';
+      output += '<th width="5%" align="center" bgcolor="#aaa">&nbsp;</td>';
+      output += '<th width="25%" align="center" bgcolor="#aaa" colspan="2">Inverted</td>';
+      output += '<th width="25%" align="center" bgcolor="#aaa" colspan="2">Calculated</td>';
+      output += '<th width="40%" align="center" bgcolor="#aaa">&nbsp;</td>';
+      output += '</tr>';
+      output += '<tr>';
+      output += '<th width="5%" align="center" bgcolor="#aaa">Range</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">From</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">To</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">From</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">To</td>';
+      output += '<th width="40%" align="center" bgcolor="#aaa">Comments</td>';
+      output += '</tr>';
+      availabilities.forEach((availability, index) => {
+        const start = moment.utc(availability.start).format(DATE_FORMAT_DISPLAY);
+        output += '<tr>';
+        output += `<td align="center">${index}</td>`;
+        output += `<td align="center">${start}</td>`;
+        output += `<td align="center">${availability.end ? moment.utc(availability.end).format(DATE_FORMAT_DISPLAY) : '-'}</td>`;
+        output += `<td align="center">${availability.calculatedStart ? moment.utc(availability.calculatedStart).format(DATE_FORMAT_DISPLAY) : '-'}</td>`;
+        output += `<td align="center">${availability.calculatedEnd ? moment.utc(availability.calculatedEnd).format(DATE_FORMAT_DISPLAY) : '-'}</td>`;
+        output += `<td align="center">${availability.comments || ''}</td>`;
+        output += '</tr>';
+        if (!firstStart && availability.calculatedStart) firstStart = availability.calculatedStart;
+      })
+      output += '<tr>';
+      output += '<td align="center" bgcolor="#ccc"><b>FROM</b></td>';
+      output += '<td bgcolor="#ccc" colspan="4">&nbsp;</td>';
+      if (firstStart) {
+        output += `<td align="center" bgcolor="#ccc"><b>${moment.utc(firstStart).format(DATE_FORMAT_DISPLAY)}</b></td>`;
+      } else {
+        output += '<td align="center" bgcolor="#ccc"><b>-</b></td>';
+      }
+      output += '</tr>';
+      output += '<table>';
+      return output;
+    }
+
+    // get availability in search
+    const getAvailabilityInSearch = availabilities => {
+      let firstAvailable = null;
+      const tripStart = $('#start-date').val();
+      const tripEnd = $('#end-date').val();
+      let output = '';
+      output += '<table width="100%" border="1" cellpadding="0" cellspacing="0">';
+      output += '<tr>';
+      output += '<th width="5%" align="center" bgcolor="#aaa">&nbsp;</td>';
+      output += '<th width="25%" align="center" bgcolor="#aaa" colspan="2">Trip</td>';
+      output += '<th width="25%" align="center" bgcolor="#aaa" colspan="2">Availability</td>';
+      output += '<th width="40%" align="center" bgcolor="#aaa">&nbsp;</td>';
+      output += '</tr>';
+      output += '<tr>';
+      output += '<th width="5%" align="center" bgcolor="#aaa">Range</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">From</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">To</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">From</td>';
+      output += '<th width="12%" align="center" bgcolor="#aaa">To</td>';
+      output += '<th width="40%" align="center" bgcolor="#aaa">Comments</td>';
+      output += '</tr>';
+      availabilities.forEach((availability, index) => {
+        output += '<tr>';
+        output += `<td align="center">${index}</td>`;
+        output += `<td align="center">${moment.utc(tripStart).format(DATE_FORMAT_DISPLAY)}</td>`;
+        output += `<td align="center">${moment.utc(tripEnd).format(DATE_FORMAT_DISPLAY)}</td>`;
+        output += `<td align="center">${moment.utc(availability.start).format(DATE_FORMAT_DISPLAY)}</td>`;
+        output += `<td align="center">${availability.end ? moment.utc(availability.end).format(DATE_FORMAT_DISPLAY) : '-'}</td>`;
+        output += `<td align="center">${availability.comments || ''}</td>`;
+        output += '</tr>';
+        if (!firstAvailable && availability.valid) firstAvailable = availability;
+      })
+      output += '<tr>';
+      output += '<td align="center" bgcolor="#ccc"><b>TRIP</b></td>';
+      output += '<td bgcolor="#ccc" colspan="2">&nbsp;</td>';
+      if (firstAvailable) {
+        output += `<td align="center" bgcolor="#ccc"><b>${moment.utc(firstAvailable.start).format(DATE_FORMAT_DISPLAY)}</b></td>`;
+        output += `<td align="center" bgcolor="#ccc"><b>${firstAvailable.end ? moment.utc(firstAvailable.end).format(DATE_FORMAT_DISPLAY) : '-'}</b></td>`;
+      } else {
+        output += '<td align="center" bgcolor="#ccc"><b>-</b></td>';
+        output += '<td align="center" bgcolor="#ccc"><b>-</b></td>';
+      }
+      output += `<td align="center" bgcolor="#ccc"><b>${firstAvailable ? 'VALID' : 'INVALID'}</b></td>`;
+      output += '</tr>';
+      output += '<table>';
+      return output;
+    }
+
+    // set defaults
+    const setDefaults = urlParams => {
+      let count = 0;
+      do {
+        const blockerFrom = urlParams.get(`blocker-from-${count}`) || '';
+        const blockerTo = urlParams.get(`blocker-to-${count}`) || '';
+        $(`#blocker-from-${count}`).val(blockerFrom);
+        $(`#blocker-to-${count}`).val(blockerTo);
+      } while ($(`#blocker-from-${++count}`).val() !== undefined);
+      const minRentalTime = {
+        amount: urlParams.get('min-rental-time-amount') || '1',
+        period: urlParams.get('min-rental-time-period') || 'month',
+      };
+      const minLeadTime = {
+        amount: urlParams.get('min-lead-time-amount') || '2',
+        period: urlParams.get('min-lead-time-period') || 'day',
+      };
+      const restrictedVacancy = {
+        amount: urlParams.get('restricted-vacancy-amount') || '15',
+        period: urlParams.get('restricted-vacancy-period') || 'day',
+      };
+      $('#min-rental-time-amount').val(minRentalTime.amount);
+      $('#min-rental-time-period').val(minRentalTime.period);
+      $('#min-lead-time-amount').val(minLeadTime.amount);
+      $('#min-lead-time-period').val(minLeadTime.period);
+      $('#restricted-vacancy-amount').val(restrictedVacancy.amount);
+      $('#restricted-vacancy-period').val(restrictedVacancy.period);
+    }
+
+    // set default dates
+    const setDefaultDates = params => {
+      const { id } = params.data;
+      $(`#blocker-from-${id}`).val('');
+      $(`#blocker-to-${id}`).val('');
+    }
+
+    // set default move in restriction
+    const setDefaultMoveInRestriction = moveInRestriction => {
+      $('#move-in-restriction').val(moveInRestriction);
+    };
+
+    // set trip dates from params or default
+    const setTripDates = (from, to) => {
+      const tripFrom = moment(from, DATE_FORMAT, true).isValid() ? from : moment().startOf('day');
+      const tripTo = moment(to, DATE_FORMAT, true).isValid() ? to : tripFrom.clone().add(DEFAULT_STAY['amount'], DEFAULT_STAY['period']).add(-1, 'day');
+      $('#start-date').val(tripFrom.format(DATE_FORMAT));
+      $('#end-date').val(tripTo.format(DATE_FORMAT));
+    };
+
+    $(document).ready(function () {
+      $('form').submit(function (event) {
+        // event.preventDefault();
+      });
+
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const moveInRestriction = urlParams.get('move-in-restriction') || 'flexible';
+      const tripFrom = moment(urlParams.get('start-date'));
+      const tripTo = moment(urlParams.get('end-date')) || (moment(tripFrom, DATE_FORMAT, true).isValid() ? tripFrom.clone().add(3, 'month').add(-1, 'day') : null);
+
+      let count = 0;
+      do {
+        $(`#blocker-clear-${count}`).bind('click', { id: count }, setDefaultDates);
+      } while ($(`#blocker-from-${++count}`).val() !== undefined);
+
+      setTripDates(tripFrom, tripTo);
+      setDefaults(urlParams);
+      setDefaultMoveInRestriction(moveInRestriction);
+      setAvailabilityRanges();
+    });
+  </script>
+</body>
+
+</html>
